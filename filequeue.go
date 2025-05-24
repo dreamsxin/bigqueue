@@ -39,7 +39,7 @@ const (
 	filePrefix = "page-"
 	fileSuffix = ".dat"
 
-	defaultFileMode = 0766
+	defaultFileMode = 0777
 
 	Default_Page_Size = 10
 )
