@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/jhunters/bigqueue"
+	"github.com/dreamsxin/bigqueue"
 )
 
 // a demo to show how to enqueue and dequeue data
