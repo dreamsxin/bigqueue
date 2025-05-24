@@ -1,3 +1,3 @@
-module github.com/jhunters/bigqueue
+module github.com/dreamsxin/bigqueue
 
 go 1.13

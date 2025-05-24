@@ -5,12 +5,12 @@ BigQueue-go is pure Golang implementation for big, fast and persistent queue bas
 [BigQueue](https://github.com/bulldog2011/bigqueue)
 </p>
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/jhunters/bigqueue?style=flat-square)](https://goreportcard.com/report/github.com/jhunters/bigqueue)
-[![Build Status](https://api.travis-ci.org/jhunters/jprotobuf.svg?branch=master)](https://travis-ci.org/jhunters/bigqueue)
-[![codecov](https://codecov.io/gh/jhunters/bigqueue/branch/master/graph/badge.svg)](https://codecov.io/gh/jhunters/bigqueue)
-[![Releases](https://img.shields.io/github/release/jhunters/bigqueue/all.svg?style=flat-square)](https://github.com/jhunters/bigqueue/releases)
-[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/jhunters/bigqueue)
-[![LICENSE](https://img.shields.io/github/license/jhunters/bigqueue.svg?style=flat-square)](https://github.com/jhunters/bigqueue/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dreamsxin/bigqueue?style=flat-square)](https://goreportcard.com/report/github.com/dreamsxin/bigqueue)
+[![Build Status](https://api.travis-ci.org/jhunters/jprotobuf.svg?branch=master)](https://travis-ci.org/dreamsxin/bigqueue)
+[![codecov](https://codecov.io/gh/dreamsxin/bigqueue/branch/master/graph/badge.svg)](https://codecov.io/gh/dreamsxin/bigqueue)
+[![Releases](https://img.shields.io/github/release/dreamsxin/bigqueue/all.svg?style=flat-square)](https://github.com/dreamsxin/bigqueue/releases)
+[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/dreamsxin/bigqueue)
+[![LICENSE](https://img.shields.io/github/license/dreamsxin/bigqueue.svg?style=flat-square)](https://github.com/dreamsxin/bigqueue/blob/master/LICENSE)
 
 ## Feature Highlight:  
 1. **Fast**: close to the speed of direct memory access, both enqueue and dequeue are close to O(1) memory access.  
@@ -29,7 +29,7 @@ BigQueue-go is pure Golang implementation for big, fast and persistent queue bas
 To start using BigQueue-Go, install Go and run `go get`:
 
 ```sh
-$ go get github.com/jhunters/bigqueue
+$ go get github.com/dreamsxin/bigqueue
 ```
 
 To run testcases:
@@ -43,7 +43,7 @@ To use bigqueue as an file implements queue, import as:
 
 ```go
 
-import	"github.com/jhunters/bigqueue"
+import	"github.com/dreamsxin/bigqueue"
 
 func main() {
 	var queue = new(bigqueue.FileQueue)

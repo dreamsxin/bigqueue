@@ -39,7 +39,7 @@ const (
 	filePrefix = "page-"
 	fileSuffix = ".dat"
 
-	defaultFileMode = 0666
+	defaultFileMode = 0766
 
 	Default_Page_Size = 10
 )
@@ -731,7 +731,7 @@ func (q *FileQueue) Close() error {
 	return nil
 }
 
-//Gc Delete all used data files to free disk space.
+// Gc Delete all used data files to free disk space.
 //
 // BigQueue will persist enqueued data in disk files, these data files will remain even after
 // the data in them has been dequeued later, so your application is responsible to periodically call

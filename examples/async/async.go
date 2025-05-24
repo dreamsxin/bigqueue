@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/jhunters/bigqueue"
+	"github.com/dreamsxin/bigqueue"
 )
 
 func main() {
