@@ -106,6 +106,10 @@ func (db *DB) mmap(minsz int) error {
 	var size = int(info.Size())
 	if size < minsz {
 		size = minsz
+		// Extend size of file if smaller than mmap size.
+		if err := db.file.Truncate(int64(size)); err != nil {
+			return fmt.Errorf("truncate error: %s", err)
+		}
 	}
 
 	// Unmap existing data before continuing.

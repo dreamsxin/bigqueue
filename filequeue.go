@@ -819,6 +819,17 @@ func (q *FileQueue) doLoopSubscribe() {
 		if !loop {
 			break
 		}
+		// select {
+		// case loop := <-q.enqueueChan:
+		// 	if !loop {
+		// 		return
+		// 	}
+		// case <-time.After(5 * time.Minute):
+		// 	if q.subscriber == nil {
+		// 		return
+		// 	}
+		// 	q.enqueueChan <- true
+		// }
 	}
 }
 

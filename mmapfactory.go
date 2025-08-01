@@ -97,6 +97,9 @@ func (f *DBFactory) removeBeforeIndex(index int64) error {
 			log.Println("Do delete index db file by gc. no=", idx)
 
 			db.Close()
+			if err := db.munmap(); err != nil {
+				log.Printf("unmap failed for %d: %v", idx, err)
+			}
 			os.Remove(f.getFilePath(idx))
 			delete(f.dbMap, idx)
 		}

@@ -35,6 +35,16 @@ func fdatasync(db *DB) error {
 // mmap memory maps a DB's data file.
 // Based on: https://github.com/edsrzf/mmap-go
 func mmap(db *DB, sz int) error {
+	currentSize, err := db.file.Stat()
+	if err != nil {
+		return err
+	}
+	if currentSize.Size() < int64(sz) {
+		if err := db.file.Truncate(int64(sz)); err != nil {
+			return os.NewSyscallError("Truncate", err)
+		}
+	}
+
 	// Open a file mapping handle.
 	sizelo := uint32(sz >> 32)
 	sizehi := uint32(sz) & 0xffffffff
